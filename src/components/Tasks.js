@@ -4,7 +4,14 @@ import PropTypes from 'prop-types';
 
 class Tasks extends Component {
     render() {
-        return  this.props.tasks.map( element => <Task task={element}  key={element.id} />)
+        return  this.props.tasks.map( 
+            element => 
+            <Task 
+                task={element} 
+                deleteTask={this.props.deleteTask} 
+                key={element.id} 
+                checkDone={this.props.checkDone}
+            />)
     }
 }
 
