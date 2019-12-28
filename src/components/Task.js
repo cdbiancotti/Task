@@ -17,7 +17,7 @@ class Task extends Component{
                 {/* you can use for the style of an element a link with a .css file */}
                 {/* or an attribute style={} filled with an object (defined in the style attribute or called from a variable (**) ) */}
                     {task.title} - {task.description} - {task.done} - {task.id}
-                    <input type="checkbox" onChange={this.props.checkDone.bind(this, task.id)}/>
+                    <input type="checkbox" checked={this.props.task.done} onChange={this.props.checkDone.bind(this, task.id)}/>
                     <button style={btnDelete} onClick={this.props.deleteTask.bind(this, task.id)}> {/* */}
                         x
                     </button> 
